@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Practice</title>
+	<link rel="stylesheet" href="practice.css">
+</head>
+<body>
+  <div class="header">
+    <div>
+      <p>
+	  Score: <span id="score">0</span></p>
+	  </div>
+	  <div class="button_menu"><p class="button_menu_open" onclick="moveToward()">
+	    [MENU] 
+	  </p></div>
+	  <div class="menu">
+	    <div class="container">
+	      <div class="button_close"><p class="button_menu_close" onclick="moveBack()">
+	        ×
+	      </p></div>
+	      <div class="regimes"><h1>
+	        [MODES]
+	      </h1>
+	      <ol class="listRegimes">
+	        <li class="slowR">
+	          Slow speed 
+	        </li>
+	         <li class="normR">
+	          Normal speed 
+	        </li>
+	           <li class="fastR">
+	          Fast speed 
+	        </li>
+	         <li class="bounceR">
+	          Bounce
+	        </li>
+	      </ol>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+  <div class="out">
+    <span class="viewMode">
+      [MODE] normal speed
+    </span>
+    <div class="food" style="left: 90px; top: 90px;"></div>
+	  <div class="snakeHead" style="left: 150px; top: 150px;">:
+	  </div>
+	</div>
+	<div class="keyboard">
+	  <div class="one">
+	    <div class="up">^</div>
+	  </div>
+	  <div class="two">
+	    <div class="left"><</div>
+	     <div class="pause_block">
+	       <div class="pause_symbol">
+	         =
+	       </div>
+	     <div class="pause_text">
+	      [PAUSE]
+	     </div></div>
+	    <div class="right">></div>
+	  </div>
+	  <div class="three">
+	    <div class="down">^</div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="practice.js"></script>
+</body>
+  </html>
