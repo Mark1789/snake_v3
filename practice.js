@@ -71,7 +71,7 @@ function coord () {
     if (bodySides.includes(cornersHeadSnake[y].toString())) {
      alert(fail());
        pauseOn();
-       defaultMode(speed, modeText, false);
+       defaultMode(speed, modeText, bounce?true:false);
     }
   }
  
