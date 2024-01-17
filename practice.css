@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+}
+.out {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  margin: auto ;
+  position: relative;
+}
+.viewMode {
+  opacity: 0.4;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  font-weight: bold;
+}
+.snakeHead {
+  width: 30px;
+  height: 30px;
+  background: lawngreen;
+  position: absolute;
+  border: 1px solid lightgreen;
+  border-radius: 3px;
+  color: blue;
+  font-size: 25px;
+  font-weight: bold;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+.snakeHead::before {
+  content: ">";
+  top: 8px;
+  left: -7px;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+}
+.snakeBody {
+  width: 30px;
+  height: 30px;
+  background: seagreen;
+  position: absolute;
+  border: 1px solid lightgreen;
+  border-radius: 3px;
+  z-index: 1;
+}
+.food {
+  width: 30px;
+  height: 30px;
+  background: orange;
+  position:absolute;
+  border: 1px solid lightcoral;
+  border-radius: 3px;
+  animation: changeSize 1s infinite;
+  animation-direction: alternate;
+}
+.header {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.button_menu {
+  display: flex;
+}
+.button_menu_open {
+
+}
+.button_menu_close {
+  font-size: 20px;
+  font-weight: bold;
+}
+.button_close {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu {
+  position: fixed;
+  top: 0%;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: coral;
+  z-index: 999;
+  transition: 0.5s;
+  user-select: none;
+}
+.container {
+  width: 300px;
+  margin: auto;
+}
+.listRegimes {
+  font-size: 20px;
+}
+.listRegimes > li:active {
+  background: black;
+}
+.keyboard {
+  width: 300px;
+  height: 220px;
+  margin: auto;
+  margin-top : 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: bold;
+}
+.one {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+}
+.up {
+  width: 110px;
+  height: 60px;
+  border: 5px white solid;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.two {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.left {
+  width: 110px;
+  height: 60px;
+  border: 5px white solid;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.pause_block {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+}
+.pause_text {
+  font-size: 10px;
+}
+.pause_symbol {
+  font-size: 40px;
+  font-weight: bold;
+  transform: rotate(90deg);
+}
+.right {
+  width: 110px;
+  height: 60px;
+  border: 5px white solid;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.three {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+}
+.down {
+  width: 110px;
+  height: 60px;
+  border: 5px white solid;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transform: rotate(180deg);
+}
+.up:active, .down:active, .left:active, .right:active {
+  background: dimgray;
+}
+
+@keyframes changeSize {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+  }
