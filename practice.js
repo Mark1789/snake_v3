@@ -309,10 +309,10 @@ function pauseOn () {
   }
 }
 
-up.addEventListener("click", () => direction("u"))
-down.addEventListener("click", () => direction("d"))
-left.addEventListener("click", () => direction("l"))
-right.addEventListener("click", () => direction("r"))
+up.addEventListener("click", (event) => {direction("u"); event.preventDefault();})
+down.addEventListener("click", (event) => {direction("d"); event.preventDefault();})
+left.addEventListener("click", (event) => {direction("l"); event.preventDefault();})
+right.addEventListener("click", (event) => {direction("r"); event.preventDefault();})
 
 
 slowM.addEventListener("click", () => defaultMode(20, "[MODE] slow speed", false))
